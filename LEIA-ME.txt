@@ -1,0 +1,23 @@
+SITE AWELL · PARCEIRO AUTORIZADO CLARO
+=======================================
+
+Páginas:
+  index.html    Início (capa com seletor de velocidade empresa/casa)
+  empresa.html  Planos para empresa (CNPJ)
+  casa.html     Planos para casa (CPF, SP capital)
+  combo.html    Monte seu combo (empresa)
+  contato.html  Contato
+
+ANTES DE SUBIR: troque o WhatsApp e o e-mail
+  Em CADA página .html, procure "var CONFIG" (perto do final do arquivo) e edite:
+    whatsapp:      DDI + DDD + número, só dígitos (ex.: 5511999998888)
+    whatsappTexto: como o número aparece escrito na tela
+    email:         e-mail da Awell
+  Todos os botões do site usam esse número automaticamente.
+
+Cada página funciona sozinha: CSS, código e logos estão dentro do próprio arquivo.
+Se for editar preços, peça para o Claude, que atualiza todas as páginas juntas.
+
+Como subir: envie os 5 arquivos .html juntos, na mesma pasta, para qualquer
+hospedagem de site estático (Hostinger, Locaweb, Netlify, Vercel, GitHub Pages).
+Não precisa de banco de dados nem servidor.
