@@ -239,7 +239,8 @@ p, h1, h2, h3, ul, ol { margin: 0; }
 .summary ul { padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.4; }
 .summary li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid rgba(255, 255, 255, .25); padding-bottom: 8px; }
 .summary li b { white-space: nowrap; }
-.summary .s-total { font-weight: 900; font-size: clamp(56px, 5vw, 76px); line-height: .95; letter-spacing: -.045em; }
+.summary .s-total { font-weight: 900; font-size: clamp(56px, 5vw, 76px); line-height: .95; letter-spacing: -.045em; white-space: nowrap; }
+.summary .s-moeda { font-size: .45em; letter-spacing: 0; vertical-align: .95em; margin-right: .12em; }
 .summary .s-note { font-size: 14px; line-height: 1.5; }
 .summary .mail { align-self: center; display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; color: #FFFFFF; }
 .pop { animation: pop .35s cubic-bezier(.2, .8, .2, 1) both; }
@@ -790,7 +791,7 @@ function ligarCombo() {
 
     el.titulo.textContent = titulo;
     el.linhas.innerHTML = linhas.map(function (l) { return '<li><span>' + esc(l[0]) + '</span><b>' + brl(l[1]) + '</b></li>'; }).join('');
-    el.total.innerHTML = '<span class="pop" style="display:inline-block">' + brl(total) + '</span>';
+    el.total.innerHTML = '<span class="pop" style="display:inline-block"><span class="s-moeda">R$</span>' + brl(total).slice(3) + '</span>';
     el.nota.textContent = nota;
     el.wa.href = wa(msg);
     el.mail.href = mail('Combo Claro empresas: ' + titulo, msg);
